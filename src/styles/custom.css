@@ -7,36 +7,36 @@
 }
 
 /* ===========================================================
-   Dark palette  (quase preto + violeta)
+   Dark palette  — alinhada com o dashboard (#09090b + lime #bef264)
    =========================================================== */
 :root[data-theme="dark"] {
-  /* Backgrounds */
-  --sl-color-bg: #08080c;
-  --sl-color-bg-nav: #0c0c12;
-  --sl-color-bg-sidebar: #09090e;
-  --sl-color-bg-inline-code: #14141e;
+  /* Backgrounds — idênticos ao dashboard */
+  --sl-color-bg: #09090b;
+  --sl-color-bg-nav: #0d0d0f;
+  --sl-color-bg-sidebar: #09090b;
+  --sl-color-bg-inline-code: #141416;
 
-  /* Accent — violet */
-  --sl-color-accent-low: #1c1535;
-  --sl-color-accent: #7c5cfc;
-  --sl-color-accent-high: #b79ffe;
+  /* Accent — lime do dashboard */
+  --sl-color-accent-low: #182300;
+  --sl-color-accent: #bef264;
+  --sl-color-accent-high: #a3e635;
 
   /* Text */
-  --sl-color-white: #f0efff;
-  --sl-color-text: #c2c0d8;
-  --sl-color-text-accent: #b79ffe;
+  --sl-color-white: #fafafa;
+  --sl-color-text: #a1a1aa;
+  --sl-color-text-accent: #bef264;
 
-  /* Grays — shifted slightly blue */
-  --sl-color-gray-1: #eeeeff;
-  --sl-color-gray-2: #c4c2de;
-  --sl-color-gray-3: #8a87a8;
-  --sl-color-gray-4: #45435e;
-  --sl-color-gray-5: #1e1c2e;
-  --sl-color-gray-6: #141320;
-  --sl-color-gray-7: #0c0c12;
+  /* Grays — neutros, zinc-like (mesmo tom do dashboard) */
+  --sl-color-gray-1: #f4f4f5;
+  --sl-color-gray-2: #d4d4d8;
+  --sl-color-gray-3: #71717a;
+  --sl-color-gray-4: #3f3f46;
+  --sl-color-gray-5: #27272a;
+  --sl-color-gray-6: #18181b;
+  --sl-color-gray-7: #0d0d0f;
 
   /* Borders */
-  --sl-color-hairline: rgba(124, 92, 252, 0.1);
+  --sl-color-hairline: rgba(190, 242, 100, 0.08);
   --sl-color-hairline-light: rgba(255, 255, 255, 0.04);
   --sl-color-hairline-shade: rgba(0, 0, 0, 0.5);
 }
@@ -47,30 +47,41 @@
 :root[data-theme="light"] {
   --sl-color-bg: #fafafa;
   --sl-color-bg-nav: #ffffff;
-  --sl-color-bg-sidebar: #f5f4ff;
-  --sl-color-bg-inline-code: #ede9ff;
+  --sl-color-bg-sidebar: #f4f4f5;
+  --sl-color-bg-inline-code: #e8f5d0;
 
-  --sl-color-accent-low: #ede9ff;
-  --sl-color-accent: #6d44f8;
-  --sl-color-accent-high: #3d20c0;
+  --sl-color-accent-low: #ecfccb;
+  --sl-color-accent: #65a30d;
+  --sl-color-accent-high: #3f6212;
 
-  --sl-color-text: #2a2840;
-  --sl-color-text-accent: #5c38e8;
+  --sl-color-text: #27272a;
+  --sl-color-text-accent: #4d7c0f;
 
-  --sl-color-hairline: rgba(109, 68, 248, 0.12);
+  --sl-color-hairline: rgba(101, 163, 13, 0.15);
   --sl-color-hairline-light: rgba(0, 0, 0, 0.04);
 }
 
 /* ===========================================================
-   Global typography refinements
+   Global typography
    =========================================================== */
 body {
-  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  font-feature-settings: "ss01", "cv11";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Headings — tighter letter-spacing, heavier weight */
+/* Selection — mesmo do dashboard */
+::selection {
+  background: rgba(190, 242, 100, 0.25);
+}
+
+/* Scrollbar — mesmo do dashboard */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #27272a; border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+
+/* Headings */
 .sl-markdown-content h1,
 .sl-markdown-content h2,
 .sl-markdown-content h3,
@@ -86,51 +97,47 @@ body {
   border-bottom: 1px solid var(--sl-color-hairline);
 }
 
-/* Links */
 .sl-markdown-content a {
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
 }
 
 /* ===========================================================
-   Code blocks — premium look
+   Code blocks
    =========================================================== */
 :root[data-theme="dark"] {
-  --astro-code-background: #0e0e18;
-  --astro-code-color: #c8c5e8;
-  --astro-code-token-constant: #b79ffe;
+  --astro-code-background: #0f0f11;
+  --astro-code-color: #d4d4d8;
+  --astro-code-token-constant: #bef264;
   --astro-code-token-string: #86efac;
-  --astro-code-token-comment: #4a4870;
-  --astro-code-token-keyword: #c084fc;
-  --astro-code-token-parameter: #93c5fd;
-  --astro-code-token-function: #7dd3fc;
+  --astro-code-token-comment: #3f3f46;
+  --astro-code-token-keyword: #a3e635;
+  --astro-code-token-parameter: #d4d4d8;
+  --astro-code-token-function: #bef264;
   --astro-code-token-string-expression: #86efac;
-  --astro-code-token-punctuation: #9896b8;
-  --astro-code-token-link: #b79ffe;
+  --astro-code-token-punctuation: #71717a;
+  --astro-code-token-link: #bef264;
 }
 
-/* Code block container */
 .expressive-code figure {
   border-radius: 10px;
-  border: 1px solid rgba(124, 92, 252, 0.15);
+  border: 1px solid rgba(190, 242, 100, 0.1);
   overflow: hidden;
-  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
 }
 
-/* Code block header bar */
 .expressive-code .frame .header {
-  background: #0e0e18;
-  border-bottom: 1px solid rgba(124, 92, 252, 0.12);
+  background: #0f0f11;
+  border-bottom: 1px solid rgba(190, 242, 100, 0.08);
 }
 
-/* Inline code */
 :root[data-theme="dark"] code:not([class]) {
-  background: #14141e;
-  border: 1px solid rgba(124, 92, 252, 0.15);
+  background: #141416;
+  border: 1px solid rgba(190, 242, 100, 0.12);
   border-radius: 4px;
   padding: 0.1em 0.35em;
   font-size: 0.875em;
-  color: #b79ffe;
+  color: #bef264;
 }
 
 /* ===========================================================
@@ -139,10 +146,9 @@ body {
 header.header {
   border-bottom: 1px solid var(--sl-color-hairline);
   backdrop-filter: blur(12px);
-  background: rgba(8, 8, 12, 0.85);
+  background: rgba(9, 9, 11, 0.85);
 }
 
-/* Site title */
 .site-title {
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -156,7 +162,6 @@ header.header {
   border-right: 1px solid var(--sl-color-hairline);
 }
 
-/* Section labels */
 .sidebar-content details summary {
   font-size: 0.7rem;
   font-weight: 600;
@@ -165,16 +170,14 @@ header.header {
   color: var(--sl-color-gray-3);
 }
 
-/* Nav links */
 .sidebar-content a {
   border-radius: 6px;
   transition: background 0.12s, color 0.12s;
 }
 
-/* Active link */
 .sidebar-content a[aria-current="page"] {
-  background: rgba(124, 92, 252, 0.12);
-  color: var(--sl-color-accent-high);
+  background: rgba(190, 242, 100, 0.08);
+  color: #bef264;
   font-weight: 500;
 }
 
@@ -186,7 +189,7 @@ header.header {
   height: 60%;
   width: 2px;
   border-radius: 2px;
-  background: var(--sl-color-accent);
+  background: #bef264;
 }
 
 .sidebar-content a:not([aria-current="page"]):hover {
@@ -195,13 +198,8 @@ header.header {
 }
 
 /* ===========================================================
-   Content area
+   Tables
    =========================================================== */
-.content-panel {
-  border: none;
-}
-
-/* Tables */
 .sl-markdown-content table {
   border-collapse: collapse;
   width: 100%;
@@ -209,7 +207,7 @@ header.header {
 }
 
 .sl-markdown-content th {
-  background: rgba(124, 92, 252, 0.08);
+  background: rgba(190, 242, 100, 0.05);
   font-weight: 600;
   font-size: 0.75rem;
   letter-spacing: 0.05em;
@@ -235,28 +233,27 @@ header.header {
 
 /* Blockquotes */
 .sl-markdown-content blockquote {
-  border-left: 2px solid var(--sl-color-accent);
-  background: rgba(124, 92, 252, 0.05);
+  border-left: 2px solid #bef264;
+  background: rgba(190, 242, 100, 0.04);
   border-radius: 0 6px 6px 0;
   padding: 0.8em 1.2em;
   color: var(--sl-color-text);
 }
 
 /* ===========================================================
-   Homepage hero cards (CardGrid)
+   Homepage cards
    =========================================================== */
 .card {
-  background: rgba(255, 255, 255, 0.025) !important;
-  border: 1px solid rgba(124, 92, 252, 0.15) !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid rgba(190, 242, 100, 0.1) !important;
   border-radius: 12px !important;
   padding: 1.5rem !important;
-  backdrop-filter: blur(8px);
   transition: border-color 0.2s, background 0.2s, transform 0.2s;
 }
 
 .card:hover {
-  background: rgba(124, 92, 252, 0.06) !important;
-  border-color: rgba(124, 92, 252, 0.35) !important;
+  background: rgba(190, 242, 100, 0.04) !important;
+  border-color: rgba(190, 242, 100, 0.25) !important;
   transform: translateY(-2px);
 }
 
@@ -266,17 +263,12 @@ header.header {
   color: var(--sl-color-white);
 }
 
-/* Icon in card */
-.card .icon {
-  color: var(--sl-color-accent);
-}
+.card .icon { color: #bef264; }
 
 /* ===========================================================
-   Hero section
+   Hero
    =========================================================== */
-.hero {
-  padding-block: 4rem;
-}
+.hero { padding-block: 4rem; }
 
 .hero .tagline {
   font-size: clamp(1rem, 2.5vw, 1.25rem);
@@ -285,43 +277,35 @@ header.header {
   line-height: 1.6;
 }
 
-/* Primary CTA button */
 .hero .action.primary {
-  background: var(--sl-color-accent);
-  border-color: var(--sl-color-accent);
+  background: #bef264;
+  color: #09090b;
+  border-color: #bef264;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.01em;
   transition: filter 0.15s, transform 0.15s;
 }
 
 .hero .action.primary:hover {
-  filter: brightness(1.1);
+  filter: brightness(1.08);
   transform: translateY(-1px);
 }
 
-/* Secondary CTA button */
 .hero .action:not(.primary) {
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background: transparent;
   transition: border-color 0.15s, background 0.15s;
 }
 
 .hero .action:not(.primary):hover {
-  border-color: rgba(124, 92, 252, 0.4);
-  background: rgba(124, 92, 252, 0.06);
+  border-color: rgba(190, 242, 100, 0.35);
+  background: rgba(190, 242, 100, 0.04);
 }
 
 /* ===========================================================
-   Steps component
-   =========================================================== */
-.sl-steps {
-  --sl-steps-accent: var(--sl-color-accent);
-}
-
-/* ===========================================================
-   Table of contents (right sidebar)
+   Table of contents
    =========================================================== */
 starlight-toc a {
   font-size: 0.8rem;
@@ -331,11 +315,11 @@ starlight-toc a {
 
 starlight-toc a:hover,
 starlight-toc a[aria-current="true"] {
-  color: var(--sl-color-accent-high);
+  color: #bef264;
 }
 
 /* ===========================================================
-   Pagination buttons
+   Pagination
    =========================================================== */
 .pagination-links a {
   border-radius: 8px;
@@ -344,6 +328,6 @@ starlight-toc a[aria-current="true"] {
 }
 
 .pagination-links a:hover {
-  border-color: rgba(124, 92, 252, 0.3);
-  background: rgba(124, 92, 252, 0.05);
+  border-color: rgba(190, 242, 100, 0.25);
+  background: rgba(190, 242, 100, 0.04);
 }
