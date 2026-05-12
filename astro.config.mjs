@@ -6,6 +6,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Sysko",
+      favicon: { href: "/logo.png", type: "image/png" },
       description:
         "Chrome DevTools for Node.js backends. Zero-config observability with automatic tracing and a real-time dashboard.",
       social: [
