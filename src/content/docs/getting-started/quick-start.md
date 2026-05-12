@@ -10,7 +10,7 @@ import { Steps } from "@astrojs/starlight/components";
 1. **Install**
 
    ```sh
-   npm install @sysko/core
+   npm install @syskoio/core
    ```
 
 2. **Add `init()` to your entry file**
@@ -18,7 +18,7 @@ import { Steps } from "@astrojs/starlight/components";
    Call `sysko.init()` before anything else in your application — before routes, middleware, or any other imports that make network calls.
 
    ```ts
-   import { init } from "@sysko/core";
+   import { init } from "@syskoio/core";
 
    const sysko = await init({ serviceName: "my-app" });
 
@@ -42,8 +42,8 @@ import { Steps } from "@astrojs/starlight/components";
 ## With Express
 
 ```ts
-import { init } from "@sysko/core";
-import { instrumentExpress } from "@sysko/plugins/express";
+import { init } from "@syskoio/core";
+import { instrumentExpress } from "@syskoio/plugins/express";
 import express from "express";
 
 const sysko = await init({ serviceName: "my-app" });
@@ -62,8 +62,8 @@ app.listen(3000);
 ## With Fastify
 
 ```ts
-import { init } from "@sysko/core";
-import { instrumentFastify } from "@sysko/plugins/fastify";
+import { init } from "@syskoio/core";
+import { instrumentFastify } from "@syskoio/plugins/fastify";
 import Fastify from "fastify";
 
 const sysko = await init({ serviceName: "my-app" });

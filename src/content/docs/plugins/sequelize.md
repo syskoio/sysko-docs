@@ -6,8 +6,8 @@ description: Tracing Sequelize database operations with Sysko.
 ## Usage
 
 ```ts
-import { init } from "@sysko/core";
-import { instrumentSequelize } from "@sysko/plugins/sequelize";
+import { init } from "@syskoio/core";
+import { instrumentSequelize } from "@syskoio/plugins/sequelize";
 import { Sequelize } from "sequelize";
 
 const sysko = await init({ serviceName: "my-app" });

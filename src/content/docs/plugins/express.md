@@ -8,7 +8,7 @@ The Express plugin captures the **route template** (`/users/:id` instead of `/us
 ## Installation
 
 ```sh
-npm install @sysko/plugins
+npm install @syskoio/plugins
 ```
 
 ## Usage
@@ -16,8 +16,8 @@ npm install @sysko/plugins
 Call `instrumentExpress` after creating your app and after calling `sysko.init()`:
 
 ```ts
-import { init } from "@sysko/core";
-import { instrumentExpress } from "@sysko/plugins/express";
+import { init } from "@syskoio/core";
+import { instrumentExpress } from "@syskoio/plugins/express";
 import express from "express";
 
 const sysko = await init({ serviceName: "my-app" });

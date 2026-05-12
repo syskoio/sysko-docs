@@ -3,7 +3,7 @@ title: The dashboard
 description: What the Sysko dashboard shows and how to use it.
 ---
 
-The Sysko dashboard is a real-time web UI served by `@sysko/transport` on port `9999` (configurable). It receives spans over a WebSocket connection and updates instantly as your app handles requests.
+The Sysko dashboard is a real-time web UI served by `@syskoio/transport` on port `9999` (configurable). It receives spans over a WebSocket connection and updates instantly as your app handles requests.
 
 Open it at [http://localhost:9999](http://localhost:9999) while your app is running.
 

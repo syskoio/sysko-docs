@@ -8,8 +8,8 @@ The BullMQ plugin traces job enqueue and consume operations.
 ## Usage
 
 ```ts
-import { init } from "@sysko/core";
-import { instrumentBullMQ } from "@sysko/plugins/bullmq";
+import { init } from "@syskoio/core";
+import { instrumentBullMQ } from "@syskoio/plugins/bullmq";
 import { Queue, Worker } from "bullmq";
 
 const sysko = await init({ serviceName: "my-app" });

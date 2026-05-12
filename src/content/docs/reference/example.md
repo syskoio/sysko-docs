@@ -1,6 +1,6 @@
 ---
 title: API Reference
-description: Complete API reference for @sysko/core.
+description: Complete API reference for @syskoio/core.
 ---
 
 ## init(options)
@@ -10,7 +10,7 @@ Initializes Sysko. Must be called before any other imports that make network cal
 Returns a `Promise<SyskoHandle>`.
 
 ```ts
-import { init } from "@sysko/core";
+import { init } from "@syskoio/core";
 
 const sysko = await init({ serviceName: "my-app" });
 ```
@@ -24,7 +24,7 @@ See [init() options](/configuration/init-options/) for the full options referenc
 Opens a new span manually. You are responsible for closing it by calling `span.end()`.
 
 ```ts
-import { startSpan } from "@sysko/core";
+import { startSpan } from "@syskoio/core";
 
 const span = startSpan({ kind: "internal", name: "my-operation" });
 span.setAttribute("custom.key", "value");
@@ -46,7 +46,7 @@ If called within an active context, the new span becomes a child of the current 
 Opens a span, runs `fn`, and closes the span when the function resolves or rejects.
 
 ```ts
-import { withSpan } from "@sysko/core";
+import { withSpan } from "@syskoio/core";
 
 const result = await withSpan({ kind: "internal", name: "my-operation" }, async () => {
   return await doWork();
@@ -62,7 +62,7 @@ Equivalent to `startSpan` + `try/catch/span.end()` but less verbose.
 Returns the `traceId` of the currently active span, or `undefined` if called outside of an active context.
 
 ```ts
-import { getCurrentTraceId } from "@sysko/core";
+import { getCurrentTraceId } from "@syskoio/core";
 
 app.get("/", (req, res) => {
   const traceId = getCurrentTraceId();

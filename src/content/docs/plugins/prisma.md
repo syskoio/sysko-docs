@@ -8,8 +8,8 @@ The Prisma plugin creates a child span for every database query, capturing the o
 ## Usage
 
 ```ts
-import { init } from "@sysko/core";
-import { instrumentPrisma } from "@sysko/plugins/prisma";
+import { init } from "@syskoio/core";
+import { instrumentPrisma } from "@syskoio/plugins/prisma";
 import { PrismaClient } from "@prisma/client";
 
 const sysko = await init({ serviceName: "my-app" });

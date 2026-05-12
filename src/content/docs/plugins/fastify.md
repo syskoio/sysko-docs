@@ -8,8 +8,8 @@ The Fastify plugin captures the route template (`/users/:id`) from every request
 ## Usage
 
 ```ts
-import { init } from "@sysko/core";
-import { instrumentFastify } from "@sysko/plugins/fastify";
+import { init } from "@syskoio/core";
+import { instrumentFastify } from "@syskoio/plugins/fastify";
 import Fastify from "fastify";
 
 const sysko = await init({ serviceName: "my-app" });

@@ -12,39 +12,39 @@ Sysko requires **Node.js 20 or later**.
 <Tabs>
   <TabItem label="npm">
     ```sh
-    npm install @sysko/core
+    npm install @syskoio/core
     ```
   </TabItem>
   <TabItem label="pnpm">
     ```sh
-    pnpm add @sysko/core
+    pnpm add @syskoio/core
     ```
   </TabItem>
   <TabItem label="yarn">
     ```sh
-    yarn add @sysko/core
+    yarn add @syskoio/core
     ```
   </TabItem>
 </Tabs>
 
 ## Optional: framework plugins
 
-Install `@sysko/plugins` if you want richer instrumentation for Express, Fastify, Prisma, Redis, and more:
+Install `@syskoio/plugins` if you want richer instrumentation for Express, Fastify, Prisma, Redis, and more:
 
 <Tabs>
   <TabItem label="npm">
     ```sh
-    npm install @sysko/plugins
+    npm install @syskoio/plugins
     ```
   </TabItem>
   <TabItem label="pnpm">
     ```sh
-    pnpm add @sysko/plugins
+    pnpm add @syskoio/plugins
     ```
   </TabItem>
   <TabItem label="yarn">
     ```sh
-    yarn add @sysko/plugins
+    yarn add @syskoio/plugins
     ```
   </TabItem>
 </Tabs>

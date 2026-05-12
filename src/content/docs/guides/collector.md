@@ -3,7 +3,7 @@ title: Using the Collector
 description: Running sysko-collector to aggregate spans from multiple services.
 ---
 
-`@sysko/collector` is a standalone agent that receives spans from multiple Sysko-instrumented services and serves a single aggregated dashboard.
+`@syskoio/collector` is a standalone agent that receives spans from multiple Sysko-instrumented services and serves a single aggregated dashboard.
 
 ## When to use it
 
@@ -36,7 +36,7 @@ npx sysko-collector --port 9999 --storage /var/data/collector.db
 
 ## How it works
 
-The Collector runs `@sysko/transport` with `ingest: true` mode, which exposes a `POST /v1/spans` endpoint. Each service's `SpanExporter` batches spans and sends them there.
+The Collector runs `@syskoio/transport` with `ingest: true` mode, which exposes a `POST /v1/spans` endpoint. Each service's `SpanExporter` batches spans and sends them there.
 
 The Collector's dashboard shows spans from all services, with `service.name` badges and the service filter in the filter bar.
 

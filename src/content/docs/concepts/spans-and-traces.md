@@ -56,7 +56,7 @@ Attributes carry the meaningful metadata for each span. Sysko sets standard attr
 You can create your own spans for any operation worth measuring:
 
 ```ts
-import { withSpan, startSpan } from "@sysko/core";
+import { withSpan, startSpan } from "@syskoio/core";
 
 // wraps an async function (auto-closes on resolve or reject)
 const result = await withSpan({ kind: "internal", name: "process-image" }, async () => {

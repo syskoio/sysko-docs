@@ -6,8 +6,8 @@ description: Tracing TypeORM database operations with Sysko.
 ## Usage
 
 ```ts
-import { init } from "@sysko/core";
-import { instrumentTypeORM } from "@sysko/plugins/typeorm";
+import { init } from "@syskoio/core";
+import { instrumentTypeORM } from "@syskoio/plugins/typeorm";
 import { DataSource } from "typeorm";
 
 const sysko = await init({ serviceName: "my-app" });

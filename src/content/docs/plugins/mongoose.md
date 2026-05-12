@@ -6,8 +6,8 @@ description: Tracing Mongoose database operations with Sysko.
 ## Usage
 
 ```ts
-import { init } from "@sysko/core";
-import { instrumentMongoose } from "@sysko/plugins/mongoose";
+import { init } from "@syskoio/core";
+import { instrumentMongoose } from "@syskoio/plugins/mongoose";
 import mongoose from "mongoose";
 
 const sysko = await init({ serviceName: "my-app" });

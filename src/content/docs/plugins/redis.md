@@ -8,8 +8,8 @@ The Redis plugin instruments `ioredis` and `redis` clients, creating a child spa
 ## Usage
 
 ```ts
-import { init } from "@sysko/core";
-import { instrumentRedis } from "@sysko/plugins/redis";
+import { init } from "@syskoio/core";
+import { instrumentRedis } from "@syskoio/plugins/redis";
 import Redis from "ioredis";
 
 const sysko = await init({ serviceName: "my-app" });

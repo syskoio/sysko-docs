@@ -6,7 +6,7 @@ description: Complete reference for all options accepted by sysko.init().
 `init()` is the single entry point into Sysko. All options are optional — calling `init({ serviceName: "my-app" })` is enough to get started.
 
 ```ts
-import { init } from "@sysko/core";
+import { init } from "@syskoio/core";
 
 const sysko = await init({
   serviceName: "my-app",
@@ -144,7 +144,7 @@ See [Alerts](/configuration/alerts/) for full documentation.
 
 **Type:** `{ url: string }`
 
-When set, spans are forwarded to a remote collector (such as `@sysko/collector`) via HTTP POST to `url/v1/spans`, in addition to being stored locally.
+When set, spans are forwarded to a remote collector (such as `@syskoio/collector`) via HTTP POST to `url/v1/spans`, in addition to being stored locally.
 
 ---
 

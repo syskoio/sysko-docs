@@ -6,8 +6,8 @@ description: Tracing raw pg queries with Sysko.
 ## Usage
 
 ```ts
-import { init } from "@sysko/core";
-import { instrumentPgClient } from "@sysko/plugins/pg";
+import { init } from "@syskoio/core";
+import { instrumentPgClient } from "@syskoio/plugins/pg";
 import { Client } from "pg";
 
 const sysko = await init({ serviceName: "my-app" });

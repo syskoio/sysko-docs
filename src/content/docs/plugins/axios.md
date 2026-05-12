@@ -8,8 +8,8 @@ The Axios plugin creates a child span for every outbound HTTP request made with 
 ## Usage
 
 ```ts
-import { init } from "@sysko/core";
-import { instrumentAxios } from "@sysko/plugins/axios";
+import { init } from "@syskoio/core";
+import { instrumentAxios } from "@syskoio/plugins/axios";
 import axios from "axios";
 
 const sysko = await init({ serviceName: "my-app" });
