@@ -2,6 +2,8 @@ import { defineConfig } from "vitepress";
 
 export default defineConfig({
   title: "Sysko",
+  base: "/",
+  sitemap: { hostname: "https://docs.sysko.io" },
   ignoreDeadLinks: "localhostLinks",
   description:
     "Chrome DevTools for Node.js backends. Zero-config observability with automatic tracing and a real-time dashboard.",
