@@ -128,7 +128,10 @@ body {
 
 .expressive-code pre {
   overflow-x: auto;
-  padding-block: 1.25rem;
+}
+
+.expressive-code {
+  --ec-codePadBlk: 1.4rem;
 }
 
 .expressive-code .frame .header {
