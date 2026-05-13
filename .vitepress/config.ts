@@ -61,6 +61,7 @@ export default defineConfig({
           { text: "Express", link: "/plugins/express" },
           { text: "ExpressoTS", link: "/plugins/expressots" },
           { text: "Fastify", link: "/plugins/fastify" },
+          { text: "NestJS", link: "/plugins/nestjs" },
           { text: "Prisma", link: "/plugins/prisma" },
           { text: "Redis", link: "/plugins/redis" },
           { text: "Axios", link: "/plugins/axios" },
