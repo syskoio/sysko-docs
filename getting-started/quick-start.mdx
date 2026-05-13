@@ -3,39 +3,37 @@ title: Quick Start
 description: Get Sysko running in under 2 minutes.
 ---
 
-import { Steps } from "@astrojs/starlight/components";
-
 <Steps>
 
-1. **Install**
+### Install
 
-   ```sh
-   npm install @syskoio/core
-   ```
+```sh
+npm install @syskoio/core
+```
 
-2. **Add `init()` to your entry file**
+### Add `init()` to your entry file
 
-   Call `sysko.init()` before anything else in your application — before routes, middleware, or any other imports that make network calls.
+Call `sysko.init()` before anything else in your application — before routes, middleware, or any other imports that make network calls.
 
-   ```ts
-   import { init } from "@syskoio/core";
+```ts
+import { init } from "@syskoio/core";
 
-   const sysko = await init({ serviceName: "my-app" });
+const sysko = await init({ serviceName: "my-app" });
 
-   // rest of your app...
-   ```
+// rest of your app...
+```
 
-   That is it. Sysko is now:
-   - Tracing every inbound HTTP request
-   - Tracing every outbound HTTP/fetch call as a child span
-   - Capturing `console.*` logs and associating them with the active span
-   - Catching uncaught errors and marking the current span as failed
+That is it. Sysko is now:
+- Tracing every inbound HTTP request
+- Tracing every outbound HTTP/fetch call as a child span
+- Capturing `console.*` logs and associating them with the active span
+- Catching uncaught errors and marking the current span as failed
 
-3. **Open the dashboard**
+### Open the dashboard
 
-   Navigate to [http://localhost:9999](http://localhost:9999) in your browser.
+Navigate to [http://localhost:9999](http://localhost:9999) in your browser.
 
-   Make a request to your app — the span appears in the dashboard immediately.
+Make a request to your app — the span appears in the dashboard immediately.
 
 </Steps>
 
@@ -88,6 +86,6 @@ Once spans appear, click any row to open the detail panel. You will see:
 
 ## Next steps
 
-- [Configure storage, sampling, and auth](/configuration/init-options/)
-- [Add a plugin for your ORM or cache](/plugins/express/)
-- [Set up distributed tracing](/guides/distributed-tracing/)
+- [Configure storage, sampling, and auth](/configuration/init-options)
+- [Add a plugin for your ORM or cache](/plugins/express)
+- [Set up distributed tracing](/guides/distributed-tracing)

@@ -3,28 +3,26 @@ title: Installation
 description: Installing Sysko in a Node.js project.
 ---
 
-import { Tabs, TabItem } from "@astrojs/starlight/components";
-
 Sysko requires **Node.js 20 or later**.
 
 ## Install the core package
 
 <Tabs>
-  <TabItem label="npm">
+  <Tab title="npm">
     ```sh
     npm install @syskoio/core
     ```
-  </TabItem>
-  <TabItem label="pnpm">
+  </Tab>
+  <Tab title="pnpm">
     ```sh
     pnpm add @syskoio/core
     ```
-  </TabItem>
-  <TabItem label="yarn">
+  </Tab>
+  <Tab title="yarn">
     ```sh
     yarn add @syskoio/core
     ```
-  </TabItem>
+  </Tab>
 </Tabs>
 
 ## Optional: framework plugins
@@ -32,21 +30,21 @@ Sysko requires **Node.js 20 or later**.
 Install `@syskoio/plugins` if you want richer instrumentation for Express, Fastify, Prisma, Redis, and more:
 
 <Tabs>
-  <TabItem label="npm">
+  <Tab title="npm">
     ```sh
     npm install @syskoio/plugins
     ```
-  </TabItem>
-  <TabItem label="pnpm">
+  </Tab>
+  <Tab title="pnpm">
     ```sh
     pnpm add @syskoio/plugins
     ```
-  </TabItem>
-  <TabItem label="yarn">
+  </Tab>
+  <Tab title="yarn">
     ```sh
     yarn add @syskoio/plugins
     ```
-  </TabItem>
+  </Tab>
 </Tabs>
 
 ## TypeScript
@@ -67,4 +65,4 @@ Your `tsconfig.json` should target at least ES2022 and use `moduleResolution: "N
 
 ## Next step
 
-Go to the [Quick Start](/getting-started/quick-start/) to see Sysko running in your app.
+Go to the [Quick Start](/getting-started/quick-start) to see Sysko running in your app.

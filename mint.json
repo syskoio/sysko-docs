@@ -1,0 +1,98 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Sysko",
+  "logo": {
+    "light": "/logo.png",
+    "dark": "/logo.png"
+  },
+  "favicon": "/logo.png",
+  "colors": {
+    "primary": "#84cc16",
+    "light": "#bef264",
+    "dark": "#65a30d"
+  },
+  "topbarLinks": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/syskoio/sysko"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "npm",
+    "url": "https://www.npmjs.com/package/@syskoio/core"
+  },
+  "anchors": [
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/syskoio/sysko"
+    },
+    {
+      "name": "npm",
+      "icon": "npm",
+      "url": "https://www.npmjs.com/package/@syskoio/core"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "getting-started/introduction",
+        "getting-started/installation",
+        "getting-started/quick-start"
+      ]
+    },
+    {
+      "group": "Core Concepts",
+      "pages": [
+        "concepts/how-tracing-works",
+        "concepts/spans-and-traces",
+        "concepts/the-dashboard"
+      ]
+    },
+    {
+      "group": "Configuration",
+      "pages": [
+        "configuration/init-options",
+        "configuration/storage",
+        "configuration/sampling",
+        "configuration/redaction",
+        "configuration/alerts",
+        "configuration/dashboard-auth"
+      ]
+    },
+    {
+      "group": "Plugins",
+      "pages": [
+        "plugins/express",
+        "plugins/fastify",
+        "plugins/prisma",
+        "plugins/redis",
+        "plugins/axios",
+        "plugins/bullmq",
+        "plugins/mongoose",
+        "plugins/sequelize",
+        "plugins/typeorm",
+        "plugins/pg"
+      ]
+    },
+    {
+      "group": "API Reference",
+      "pages": [
+        "reference/example"
+      ]
+    },
+    {
+      "group": "Guides",
+      "pages": [
+        "guides/distributed-tracing",
+        "guides/production-checklist",
+        "guides/collector",
+        "guides/vs-otel"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "github": "https://github.com/syskoio/sysko"
+  }
+}

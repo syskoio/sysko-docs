@@ -7,6 +7,21 @@ Sysko Observe is a Node.js observability library that gives you automatic reques
 
 Think of it as **Chrome DevTools for your backend**.
 
+<CardGroup cols={2}>
+  <Card title="Zero config" icon="rocket">
+    Call `sysko.init()` and you are done. No YAML, no exporters, no infrastructure to set up.
+  </Card>
+  <Card title="Automatic tracing" icon="bolt">
+    HTTP in/out, database queries, console logs, and errors are captured automatically via `AsyncLocalStorage`. No manual instrumentation needed.
+  </Card>
+  <Card title="Real-time dashboard" icon="chart-bar">
+    A built-in dashboard streams spans to your browser instantly. No Prometheus, no Grafana, no Loki.
+  </Card>
+  <Card title="Production ready" icon="shield-check">
+    SQLite persistence, sampling, PII redaction, rate limiting, auth, alerts, and graceful shutdown — all configurable.
+  </Card>
+</CardGroup>
+
 ## Who it is for
 
 Sysko is built for teams and developers who want observability without the overhead of a full OpenTelemetry + Grafana + Datadog stack:
@@ -26,7 +41,7 @@ Once you call `sysko.init()`, the following are instrumented automatically — n
 - **Uncaught errors**: `uncaughtException` and `unhandledRejection` mark the active span as failed
 - **W3C `traceparent`**: injected into outbound requests and extracted from inbound ones, so traces continue across services
 
-Additional instrumentation (Express, Fastify, Prisma, Redis, etc.) is available as opt-in [plugins](/plugins/express/).
+Additional instrumentation (Express, Fastify, Prisma, Redis, etc.) is available as opt-in [plugins](/plugins/express).
 
 ## What it is not
 
@@ -48,4 +63,4 @@ Sysko is not a replacement for every use case:
 | Production use | Yes (SQLite, sampling, auth) | Yes |
 | Enterprise features | No | Yes |
 
-For a detailed comparison, see [Sysko vs OpenTelemetry](/guides/vs-otel/).
+For a detailed comparison, see [Sysko vs OpenTelemetry](/guides/vs-otel).
