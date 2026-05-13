@@ -17,7 +17,7 @@ Call `instrumentExpress` after `sysko.init()` and before `app.listen()`:
 
 ```ts
 import { init } from "@syskoio/core";
-import { instrumentExpress } from "@syskoio/plugins/express";
+import { instrumentExpress } from "@syskoio/plugins";
 import { AppFactory, ServerEnvironment } from "@expressots/core";
 import { appContainer } from "./app.container";
 

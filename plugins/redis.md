@@ -5,11 +5,17 @@ description: Tracing Redis cache operations with Sysko.
 
 The Redis plugin instruments `ioredis` and `redis` clients, creating a child span for every cache operation.
 
+## Installation
+
+```sh
+npm install @syskoio/plugins
+```
+
 ## Usage
 
 ```ts
 import { init } from "@syskoio/core";
-import { instrumentRedis } from "@syskoio/plugins/redis";
+import { instrumentRedis } from "@syskoio/plugins";
 import Redis from "ioredis";
 
 const sysko = await init({ serviceName: "my-app" });

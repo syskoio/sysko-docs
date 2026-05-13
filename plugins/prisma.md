@@ -5,11 +5,17 @@ description: Tracing Prisma database queries with Sysko.
 
 The Prisma plugin creates a child span for every database query, capturing the operation, model, and duration.
 
+## Installation
+
+```sh
+npm install @syskoio/plugins
+```
+
 ## Usage
 
 ```ts
 import { init } from "@syskoio/core";
-import { instrumentPrisma } from "@syskoio/plugins/prisma";
+import { instrumentPrisma } from "@syskoio/plugins";
 import { PrismaClient } from "@prisma/client";
 
 const sysko = await init({ serviceName: "my-app" });

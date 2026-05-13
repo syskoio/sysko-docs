@@ -3,11 +3,19 @@ title: TypeORM plugin
 description: Tracing TypeORM database operations with Sysko.
 ---
 
+The TypeORM plugin traces entity operations via a TypeORM subscriber.
+
+## Installation
+
+```sh
+npm install @syskoio/plugins
+```
+
 ## Usage
 
 ```ts
 import { init } from "@syskoio/core";
-import { instrumentTypeORM } from "@syskoio/plugins/typeorm";
+import { instrumentTypeORM } from "@syskoio/plugins";
 import { DataSource } from "typeorm";
 
 const sysko = await init({ serviceName: "my-app" });

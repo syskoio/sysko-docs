@@ -17,7 +17,7 @@ Call `instrumentExpress` after creating your app and after calling `sysko.init()
 
 ```ts
 import { init } from "@syskoio/core";
-import { instrumentExpress } from "@syskoio/plugins/express";
+import { instrumentExpress } from "@syskoio/plugins";
 import express from "express";
 
 const sysko = await init({ serviceName: "my-app" });

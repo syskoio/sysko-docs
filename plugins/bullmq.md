@@ -5,19 +5,32 @@ description: Tracing BullMQ jobs with Sysko.
 
 The BullMQ plugin traces job enqueue and consume operations.
 
+## Installation
+
+```sh
+npm install @syskoio/plugins
+```
+
 ## Usage
 
 ```ts
 import { init } from "@syskoio/core";
-import { instrumentBullMQ } from "@syskoio/plugins/bullmq";
+import { instrumentBullMQQueue, instrumentBullMQProcessor } from "@syskoio/plugins";
 import { Queue, Worker } from "bullmq";
 
 const sysko = await init({ serviceName: "my-app" });
 
+// Instrument the queue — wraps queue.add in a queue.publish span.
 const queue = new Queue("emails");
-const worker = new Worker("emails", async (job) => { /* process */ });
+instrumentBullMQQueue(queue);
 
-instrumentBullMQ(queue, worker);
+// Instrument the processor — wraps the handler in a queue.consume span.
+const worker = new Worker(
+  "emails",
+  instrumentBullMQProcessor(async (job) => {
+    // process job
+  }),
+);
 ```
 
 ## Span attributes

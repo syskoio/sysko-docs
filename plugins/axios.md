@@ -5,11 +5,17 @@ description: Tracing outbound Axios requests with Sysko.
 
 The Axios plugin creates a child span for every outbound HTTP request made with Axios.
 
+## Installation
+
+```sh
+npm install @syskoio/plugins
+```
+
 ## Usage
 
 ```ts
 import { init } from "@syskoio/core";
-import { instrumentAxios } from "@syskoio/plugins/axios";
+import { instrumentAxios } from "@syskoio/plugins";
 import axios from "axios";
 
 const sysko = await init({ serviceName: "my-app" });

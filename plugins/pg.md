@@ -3,11 +3,19 @@ title: pg (node-postgres) plugin
 description: Tracing raw pg queries with Sysko.
 ---
 
+The pg plugin creates a child span for every query executed via a `pg.Client` instance.
+
+## Installation
+
+```sh
+npm install @syskoio/plugins
+```
+
 ## Usage
 
 ```ts
 import { init } from "@syskoio/core";
-import { instrumentPgClient } from "@syskoio/plugins/pg";
+import { instrumentPgClient } from "@syskoio/plugins";
 import { Client } from "pg";
 
 const sysko = await init({ serviceName: "my-app" });
