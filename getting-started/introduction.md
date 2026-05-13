@@ -3,24 +3,11 @@ title: Introduction
 description: What Sysko is, who it is for, and what it is not.
 ---
 
+# Introduction
+
 Sysko Observe is a Node.js observability library that gives you automatic request tracing, a real-time dashboard, and production-grade features — all from a single `init()` call.
 
 Think of it as **Chrome DevTools for your backend**.
-
-<CardGroup cols={2}>
-  <Card title="Zero config" icon="rocket">
-    Call `sysko.init()` and you are done. No YAML, no exporters, no infrastructure to set up.
-  </Card>
-  <Card title="Automatic tracing" icon="bolt">
-    HTTP in/out, database queries, console logs, and errors are captured automatically via `AsyncLocalStorage`. No manual instrumentation needed.
-  </Card>
-  <Card title="Real-time dashboard" icon="chart-bar">
-    A built-in dashboard streams spans to your browser instantly. No Prometheus, no Grafana, no Loki.
-  </Card>
-  <Card title="Production ready" icon="shield-check">
-    SQLite persistence, sampling, PII redaction, rate limiting, auth, alerts, and graceful shutdown — all configurable.
-  </Card>
-</CardGroup>
 
 ## Who it is for
 
@@ -54,13 +41,13 @@ Sysko is not a replacement for every use case:
 
 ## How it compares to OpenTelemetry
 
-| | Sysko | OpenTelemetry |
-|---|---|---|
-| Setup time | < 2 minutes | Hours to days |
-| Config required | None | Exporters, collectors, backends |
-| Dashboard included | Yes (built-in) | No (needs Grafana, Jaeger, etc.) |
-| Automatic instrumentation | Yes | Via separate packages |
-| Production use | Yes (SQLite, sampling, auth) | Yes |
-| Enterprise features | No | Yes |
+|                          | Sysko               | OpenTelemetry                       |
+|--------------------------|---------------------|-------------------------------------|
+| Setup time               | < 2 minutes         | Hours to days                       |
+| Config required          | None                | Exporters, collectors, backends     |
+| Dashboard included       | Yes (built-in)      | No (needs Grafana, Jaeger, etc.)    |
+| Automatic instrumentation| Yes                 | Via separate packages               |
+| Production use           | Yes (SQLite, auth)  | Yes                                 |
+| Enterprise features      | No                  | Yes                                 |
 
 For a detailed comparison, see [Sysko vs OpenTelemetry](/guides/vs-otel).

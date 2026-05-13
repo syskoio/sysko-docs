@@ -3,49 +3,47 @@ title: Installation
 description: Installing Sysko in a Node.js project.
 ---
 
+# Installation
+
 Sysko requires **Node.js 20 or later**.
 
 ## Install the core package
 
-<Tabs>
-  <Tab title="npm">
-    ```sh
-    npm install @syskoio/core
-    ```
-  </Tab>
-  <Tab title="pnpm">
-    ```sh
-    pnpm add @syskoio/core
-    ```
-  </Tab>
-  <Tab title="yarn">
-    ```sh
-    yarn add @syskoio/core
-    ```
-  </Tab>
-</Tabs>
+::: code-group
+
+```sh [npm]
+npm install @syskoio/core
+```
+
+```sh [pnpm]
+pnpm add @syskoio/core
+```
+
+```sh [yarn]
+yarn add @syskoio/core
+```
+
+:::
 
 ## Optional: framework plugins
 
 Install `@syskoio/plugins` if you want richer instrumentation for Express, Fastify, Prisma, Redis, and more:
 
-<Tabs>
-  <Tab title="npm">
-    ```sh
-    npm install @syskoio/plugins
-    ```
-  </Tab>
-  <Tab title="pnpm">
-    ```sh
-    pnpm add @syskoio/plugins
-    ```
-  </Tab>
-  <Tab title="yarn">
-    ```sh
-    yarn add @syskoio/plugins
-    ```
-  </Tab>
-</Tabs>
+::: code-group
+
+```sh [npm]
+npm install @syskoio/plugins
+```
+
+```sh [pnpm]
+pnpm add @syskoio/plugins
+```
+
+```sh [yarn]
+yarn add @syskoio/plugins
+```
+
+:::
 
 ## TypeScript
 

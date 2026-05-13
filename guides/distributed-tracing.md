@@ -23,7 +23,7 @@ Use the **service filter** in the filter bar to narrow to a specific service, or
 
 When you have multiple services, you can run `@sysko/collector` as a central aggregation point. Each service sends its spans to the Collector, which stores and serves them from a single dashboard.
 
-See [Using the Collector](/guides/collector/) for setup instructions.
+See [Using the Collector](/guides/collector) for setup instructions.
 
 ## Propagating context to non-Sysko services
 

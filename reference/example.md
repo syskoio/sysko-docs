@@ -15,7 +15,7 @@ import { init } from "@syskoio/core";
 const sysko = await init({ serviceName: "my-app" });
 ```
 
-See [init() options](/configuration/init-options/) for the full options reference.
+See [init() options](/configuration/init-options) for the full options reference.
 
 ---
 

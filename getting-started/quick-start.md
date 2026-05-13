@@ -3,15 +3,15 @@ title: Quick Start
 description: Get Sysko running in under 2 minutes.
 ---
 
-<Steps>
+# Quick Start
 
-### Install
+## 1. Install
 
 ```sh
 npm install @syskoio/core
 ```
 
-### Add `init()` to your entry file
+## 2. Add `init()` to your entry file
 
 Call `sysko.init()` before anything else in your application — before routes, middleware, or any other imports that make network calls.
 
@@ -29,13 +29,13 @@ That is it. Sysko is now:
 - Capturing `console.*` logs and associating them with the active span
 - Catching uncaught errors and marking the current span as failed
 
-### Open the dashboard
+## 3. Open the dashboard
 
 Navigate to [http://localhost:9999](http://localhost:9999) in your browser.
 
 Make a request to your app — the span appears in the dashboard immediately.
 
-</Steps>
+---
 
 ## With Express
 

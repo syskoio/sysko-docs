@@ -136,7 +136,7 @@ alerts: [
 
 Supported `type` values: `"errorRate"`, `"p95"`, `"spanCount"`.
 
-See [Alerts](/configuration/alerts/) for full documentation.
+See [Alerts](/configuration/alerts) for full documentation.
 
 ---
 

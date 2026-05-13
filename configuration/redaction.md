@@ -56,4 +56,4 @@ sysko.onSpan((span) => {
 });
 ```
 
-See [init() options — onSpan](/configuration/init-options/#return-value) for full API details.
+See [init() options — onSpan](/configuration/init-options#return-value) for full API details.
