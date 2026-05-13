@@ -7,7 +7,7 @@ description: What Sysko is, who it is for, and what it is not.
 
 Sysko Observe is a Node.js observability library that gives you automatic request tracing, a real-time dashboard, and production-grade features — all from a single `init()` call.
 
-Think of it as **Chrome DevTools for your backend**.
+Think of it as **DevTools for your backend**.
 
 ## Who it is for
 

@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: Sysko
-  text: Chrome DevTools for Node.js
+  text: DevTools for Node.js
   tagline: Zero-config observability with automatic tracing and a real-time dashboard. Up and running in under 2 minutes.
   image:
     src: /logo.png
