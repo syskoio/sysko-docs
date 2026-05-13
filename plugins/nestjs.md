@@ -20,13 +20,12 @@ NestJS decorators require two compiler flags that are off by default:
   "compilerOptions": {
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "isolatedModules": false,
-    "moduleResolution": "bundler"
+    "isolatedModules": false
   }
 }
 ```
 
-`moduleResolution: "bundler"` is required for `@syskoio/plugins/express` subpath imports to resolve correctly.
+No changes to `module` or `moduleResolution` are needed — Sysko is imported from the package root, which resolves correctly under any standard NestJS tsconfig.
 
 ## Usage
 
@@ -34,7 +33,7 @@ NestJS decorators require two compiler flags that are off by default:
 // main.ts
 import "reflect-metadata";
 import { init } from "@syskoio/core";
-import { instrumentExpress } from "@syskoio/plugins/express";
+import { instrumentExpress } from "@syskoio/plugins";
 import { NestFactory } from "@nestjs/core";
 import { NestExpressApplication } from "@nestjs/platform-express";
 import { AppModule } from "./app.module.js";
