@@ -13,7 +13,7 @@ export default defineConfig({
         {
           icon: "github",
           label: "GitHub",
-          href: "https://github.com/leonardoreis/sysko",
+          href: "https://github.com/syskoio/sysko",
         },
       ],
       sidebar: [

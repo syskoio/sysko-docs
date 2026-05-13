@@ -126,6 +126,11 @@ body {
   box-shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
 }
 
+.expressive-code pre {
+  overflow-x: auto;
+  padding-block: 1.25rem;
+}
+
 .expressive-code .frame .header {
   background: #0f0f11;
   border-bottom: 1px solid rgba(190, 242, 100, 0.08);
