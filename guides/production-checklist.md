@@ -77,6 +77,47 @@ alerts: [
 ],
 ```
 
+## Running inside Docker
+
+When Sysko runs inside a Docker container, the default `host: "127.0.0.1"` binds the dashboard to the container's loopback interface only. The dashboard starts successfully but is unreachable from outside the container — no reverse proxy or port mapping will reach it.
+
+Set `host: "0.0.0.0"` to bind to all interfaces and always pair it with a password:
+
+```ts
+dashboard: {
+  host: "0.0.0.0",
+  port: 9999,
+  password: process.env.SYSKO_PASSWORD,
+},
+```
+
+Make sure the Dockerfile exposes the port:
+
+```dockerfile
+EXPOSE 3000
+EXPOSE 9999
+```
+
+### PaaS platforms (CapRover, Railway, Render, Fly.io)
+
+These platforms route HTTP traffic through a reverse proxy, typically to a single port per app. To make the dashboard accessible:
+
+- **CapRover:** in "HTTP Settings", add a second domain (e.g. `dashboard.myapp.example.com`) pointing to port `9999`. CapRover will provision HTTPS automatically.
+- **Railway / Render:** expose port `9999` as an additional service port in the platform settings and point a custom domain or the generated URL to it.
+- **Fly.io:** add a second `[[services]]` block in `fly.toml` for port `9999`.
+
+### SQLite inside Docker
+
+The default SQLite path is `~/.sysko/<serviceName>.db` (inside the container's home directory). Mount a volume to persist spans across restarts:
+
+```dockerfile
+VOLUME ["/data/sysko"]
+```
+
+```ts
+storage: { path: "/data/sysko/spans.db" },
+```
+
 ## Graceful shutdown
 
 Sysko registers `SIGTERM` and `SIGINT` handlers automatically. If you manage shutdown yourself, call `sysko.shutdown()` explicitly:
